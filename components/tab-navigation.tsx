@@ -47,11 +47,6 @@ export function TabNavigation({ activeTab, onChange }: TabNavigationProps) {
           <span className="text-xs mt-1">Shop</span>
         </button>
       </div>
-
-      <Button variant="ghost" size="icon" onClick={toggleTheme} className="ml-2">
-        {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        <span className="sr-only">Toggle theme</span>
-      </Button>
     </div>
   )
 }
