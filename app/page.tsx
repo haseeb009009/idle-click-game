@@ -44,7 +44,7 @@ export default function IdleGame() {
   }, [])
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-sky-200 to-sky-100 dark:from-gray-900 dark:to-gray-800 touch-none">
+    <div className="flex flex-col h-screen bg-gradient-to-b from-gray-900 to-gray-800 touch-none">
       {/* Resource Bar */}
       <ResourceBar resources={resources} />
 
@@ -63,9 +63,9 @@ export default function IdleGame() {
 
         {/* Sky with clouds */}
         <div className="absolute inset-0 h-1/2 overflow-hidden">
-          <div className="cloud absolute w-20 h-10 bg-white dark:bg-gray-300 rounded-full left-10 top-20 opacity-80 animate-cloud-1"></div>
-          <div className="cloud absolute w-32 h-16 bg-white dark:bg-gray-300 rounded-full left-40 top-40 opacity-70 animate-cloud-2"></div>
-          <div className="cloud absolute w-24 h-12 bg-white dark:bg-gray-300 rounded-full right-20 top-30 opacity-75 animate-cloud-3"></div>
+          <div className="cloud absolute w-20 h-10 bg-gray-300 rounded-full left-10 top-20 opacity-80 animate-cloud-1"></div>
+          <div className="cloud absolute w-32 h-16 bg-gray-300 rounded-full left-40 top-40 opacity-70 animate-cloud-2"></div>
+          <div className="cloud absolute w-24 h-12 bg-gray-300 rounded-full right-20 top-30 opacity-75 animate-cloud-3"></div>
         </div>
 
         {/* Ground/Surface */}
@@ -82,7 +82,7 @@ export default function IdleGame() {
       </div>
 
       {/* Tab Content */}
-      <div className="bg-white dark:bg-gray-800 rounded-t-xl shadow-lg">
+      <div className="bg-gray-800 rounded-t-xl shadow-lg">
         {activeTab === "buildings" && (
           <BuildingsTab
             buildings={buildings.filter((b) => !b.placed)}
@@ -109,4 +109,3 @@ export default function IdleGame() {
     </div>
   )
 }
-
